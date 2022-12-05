@@ -21,7 +21,8 @@ let pokemonRepository = (function () {
    } ;
 })() ;
 
- pokemonRepository.add({name: 'Cottonee' , height: '0.3' , type: ['fairy', 'grass'] }, )
+ pokemonRepository.add( {name: 'Cottonee' , height: '0.3' , type: ['fairy', 'grass'] } ) ,
+ pokemonRepository.add( {name: 'Tynamo' , height: '0.2' , type: 'electric' } ) ,
 
  pokemonRepository.getAll().forEach(function(pokemon) {
    if (pokemon.height >= 5.0) {
@@ -30,9 +31,10 @@ let pokemonRepository = (function () {
    else if (pokemon.height < 0.3) {
       document.write(pokemon.name + ' ' + pokemon.height + " - Oh!  Its so tiny!" + "</br>" )
    }
-   else {document.write(pokemon.name + ' ' + pokemon.height + "</br>" ) 
+   else {
+      document.write(pokemon.name + ' ' + pokemon.height + "</br>" ) 
    }
-})
+ })
 
 
 
